@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AppRoutes from './routes/approutes';
-import SplashScreen from './components/SplashScren';
+import SplashScreen from './components/splashscren';
 
 function App() {
   // Si ya vio el splash en esta sesión, arranca en false directamente

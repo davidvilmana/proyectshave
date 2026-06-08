@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import websocketService from "../api/WebSocket"; 
 import { FiSend } from "react-icons/fi";
-import "../style/Chat.css";
+import "../style/chat.css";
 
 
 const Chat = () => {

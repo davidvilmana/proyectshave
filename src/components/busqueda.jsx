@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { obtenerDestinos, obtenertours } from "../api/api";
-import CarritoReservas from "../pages/Carrito";
+import CarritoReservas from "../pages/carrito";
 import { toast } from "sonner";
 
 /* ══════════════════════════════════════════

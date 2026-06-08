@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, Fragment } from "react";
 
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import "../style/home.css";
 import Img1 from "../assets/post_ai_shave_3.webp";
 import Img2 from "../assets/post_ai_shave_3.webp";

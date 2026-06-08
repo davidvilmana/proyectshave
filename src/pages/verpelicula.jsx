@@ -5,7 +5,7 @@ import { VscDebugRestart } from "react-icons/vsc";
 import { FiCalendar, FiTag } from "react-icons/fi";
 import { obtenerPeliculasPorID, obtenerPeliculas } from "../api/api";
 import ReactPlayer from "react-player";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import "../style/verpelicula.css";
 
 const BASE = "http://192.168.1.121:5000/videos/";

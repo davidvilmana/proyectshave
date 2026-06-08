@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLightbulb } from "react-icons/fa6";
 import { GiSupersonicArrow } from "react-icons/gi";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import "../style/sobrenosotros.css";
 
 const fadeUp = {

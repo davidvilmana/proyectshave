@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { VscDebugRestart } from "react-icons/vsc";
 import { obtenerPeliculas } from "../api/api";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import "../style/peliculas.css";
 
 /* ── Variantes ── */

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import { FiMail, FiClock, FiSend } from "react-icons/fi";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import "../style/contacto.css";
 
 /* ══ Animación ══ */

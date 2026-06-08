@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import Img1 from "../assets/n400.webp";
 import Img2 from "../assets/GranVanTurismo.webp";
 import Img3 from "../assets/c37.webp";
