@@ -1,10 +1,14 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 8080;
 
-const BUILD_DIR = path.join(__dirname, "dist"); // ✅ Vite build en la raíz
+const BUILD_DIR = path.join(__dirname, "dist");
 
 app.use(express.static(BUILD_DIR));
 
