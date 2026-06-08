@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AppRoutes from './routes/AppRoutes';
+import AppRoutes from './routes/approutes';
 import SplashScreen from './components/SplashScren';
 
 function App() {
