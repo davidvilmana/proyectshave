@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "my_proyect_shave",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.20.6",
     "firebase": "^11.6.0",
     "framer-motion": "^12.7.3",
     "my-app": "file:",
