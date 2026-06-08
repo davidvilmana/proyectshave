@@ -12,7 +12,8 @@ const BUILD_DIR = path.join(__dirname, "dist");
 
 app.use(express.static(BUILD_DIR));
 
-app.get("*", (req, res) => {
+// ✅ Cambiado de "*" a "/*" para Express 5
+app.get("/*", (req, res) => {
   res.sendFile(path.join(BUILD_DIR, "index.html"));
 });
 
