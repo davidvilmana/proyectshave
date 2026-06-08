@@ -12,8 +12,8 @@ const BUILD_DIR = path.join(__dirname, "dist");
 
 app.use(express.static(BUILD_DIR));
 
-// ✅ Cambiado de "*" a "/*" para Express 5
-app.get("/*", (req, res) => {
+// ✅ Express 5 compatible - usa regex en lugar de wildcard
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(BUILD_DIR, "index.html"));
 });
 
