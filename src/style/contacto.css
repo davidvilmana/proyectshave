@@ -1,0 +1,404 @@
+
+.ct-page {
+  min-height: 100vh;
+  color: #e2e8f0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Glows */
+.ct-glow-left {
+  position: absolute;
+  top: 10%;
+  left: -12%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 65%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.ct-glow-right {
+  position: absolute;
+  bottom: 15%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 65%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* ══ HERO ══ */
+.ct-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 5rem 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ct-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  border: 0.5px solid rgba(255,255,255,.1);
+  padding: 5px 16px;
+  border-radius: 20px;
+}
+
+.ct-title {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.ct-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,.38);
+  line-height: 1.75;
+  max-width: 400px;
+}
+
+/* ══ CONTAINER ══ */
+.ct-container {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem 5rem;
+}
+
+/* ══ GRID ══ */
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 680px) {
+  .ct-grid {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}
+
+/* ══ SHARED CARD ══ */
+.ct-info-card,
+.ct-social-card,
+.ct-form-card {
+  background: linear-gradient(145deg, #131820 0%, #161e2c 100%);
+  border: 0.5px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.ct-card-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(255,255,255,.3);
+  margin-bottom: 1.1rem;
+}
+
+/* ══ SIDEBAR ══ */
+.ct-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Info list */
+.ct-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ct-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ct-info-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(99,102,241,.1);
+  border: 0.5px solid rgba(99,102,241,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5b4fc;
+  flex-shrink: 0;
+}
+
+.ct-info-label {
+  font-size: 11px;
+  color: rgba(255,255,255,.3);
+  margin-bottom: 2px;
+}
+
+.ct-info-value {
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+}
+
+.ct-info-value.link {
+  text-decoration: none;
+  transition: color .18s;
+}
+
+.ct-info-value.link:hover { color: #a5b4fc; }
+
+/* Social */
+.ct-social-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  background: rgba(255,255,255,.04);
+  border: 0.5px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background .18s, color .18s, border-color .18s;
+}
+
+.ct-social-btn:hover {
+  background: rgba(255,255,255,.08);
+  color: var(--hc, white);
+  border-color: rgba(255,255,255,.15);
+}
+
+/* ══ FORMULARIO ══ */
+.ct-form-card {
+  position: relative;
+}
+
+/* Línea acento */
+.ct-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,.5), transparent);
+  border-radius: 1px;
+}
+
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ct-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .ct-form-row { grid-template-columns: 1fr; }
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .02em;
+}
+
+.ct-input,
+.ct-textarea {
+  background: rgba(255,255,255,.05);
+  border: 0.5px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 0 14px;
+  height: 44px;
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+  width: 100%;
+}
+
+.ct-textarea {
+  height: auto;
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ct-input::placeholder,
+.ct-textarea::placeholder { color: rgba(255,255,255,.2); }
+
+.ct-input:hover,
+.ct-textarea:hover {
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.07);
+}
+
+.ct-input:focus,
+.ct-textarea:focus {
+  border-color: rgba(99,102,241,.5);
+  background: rgba(99,102,241,.06);
+  box-shadow: 0 0 0 3px rgba(99,102,241,.08);
+}
+
+/* ══ BTN PRIMARY ══ */
+.ct-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .2s, transform .2s;
+  align-self: flex-start;
+}
+
+.ct-btn-primary:hover:not(.loading) {
+  opacity: .88;
+  transform: translateY(-2px);
+}
+
+.ct-btn-primary.loading {
+  opacity: .65;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Spinner */
+.ct-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,.2);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: ct-spin .7s linear infinite;
+}
+
+══════════════════════════════════════ */
+
+/* ── Vista previa WhatsApp ── */
+.ct-preview {
+  background: #0d1117;
+  border: 0.5px solid rgba(37, 211, 102, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+/* ── Fallback WhatsApp bloqueado ── */
+.ct-wa-fallback {
+  background: rgba(251, 191, 36, 0.07);
+  border: 0.5px solid rgba(251, 191, 36, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.ct-wa-fallback-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.ct-btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ct-btn-wa:hover {
+  background: #15803d;
+}
+
+@keyframes ct-spin { to { transform: rotate(360deg); } }
+
+/* ══ SUCCESS ══ */
+.ct-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.ct-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(16,185,129,.12);
+  border: 0.5px solid rgba(16,185,129,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6ee7b7;
+}
+
+.ct-success-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.ct-success-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,.45);
+  line-height: 1.65;
+  max-width: 300px;
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 400px) {
+  .ct-hero    { padding: 3.5rem 1rem 2rem; }
+  .ct-container { padding: 0 1rem 4rem; }
+  .ct-info-card,
+  .ct-social-card,
+  .ct-form-card { padding: 1.1rem; }
+}

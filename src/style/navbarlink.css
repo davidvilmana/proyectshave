@@ -1,0 +1,290 @@
+/* ══════════════════════════════════════════
+   navbarlink.css  —  Menú móvil glass
+══════════════════════════════════════════ */
+
+/* ── Overlay ── */
+.nl-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(5, 8, 18, 0.55);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+}
+
+/* ── Panel lateral ── */
+.nl-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+
+  /* Glassmorphism igual al navbar */
+  background: rgba(13, 18, 32, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+
+  border-left: 0.5px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    -8px 0 32px rgba(0, 0, 0, 0.4),
+    0 0 0 0.5px rgba(255, 255, 255, 0.04) inset;
+}
+
+/* Acento de color en el borde superior */
+.nl-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99, 102, 241, 0.7),
+    rgba(129, 140, 248, 0.5),
+    transparent
+  );
+}
+
+/* ── Header ── */
+.nl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 16px;
+}
+
+
+.nl-close { 
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.nl-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* ── Divider ── */
+.nl-divider {
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+/* ── Body ── */
+.nl-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 20px;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+/* ── User card ── */
+.nl-user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+}
+
+.nl-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border: 0.5px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #bfdbfe;
+  flex-shrink: 0;
+}
+
+.nl-user-info { min-width: 0; }
+
+.nl-user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nl-user-email {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+/* ── Navegación ── */
+.nl-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Link base */
+.nl-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 0.18s, color 0.18s;
+}
+
+.nl-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.nl-link.open {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nl-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  transition: color 0.18s;
+}
+
+.nl-link:hover .nl-link-icon { color: rgba(255, 255, 255, 0.65); }
+
+/* Dropdown btn */
+.nl-dropdown-btn {
+  justify-content: flex-start;
+}
+
+.nl-chevron {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.25);
+  transition: transform 0.28s ease;
+  flex-shrink: 0;
+}
+
+.nl-chevron.open { transform: rotate(180deg); }
+
+/* Submenu */
+.nl-submenu {
+  overflow: hidden;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nl-sublink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+
+.nl-sublink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nl-sublink-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.nl-sublink:hover .nl-sublink-dot {
+  background: rgba(129, 140, 248, 0.7);
+}
+
+/* ── Sesión ── */
+.nl-session {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.nl-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: rgba(252, 165, 165, 0.75);
+  background: rgba(239, 68, 68, 0.06);
+  border: 0.5px solid rgba(239, 68, 68, 0.12);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.nl-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.22);
+  color: #fca5a5;
+}
+
+.nl-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.nl-login-btn:hover { opacity: 0.88; }

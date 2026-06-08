@@ -1,0 +1,197 @@
+
+.footer {
+  position: relative;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+/* Brillo ambiental de fondo */
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(
+    ellipse,
+    rgba(99, 102, 241, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Línea de acento superior */
+.footer-accent {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(99, 102, 241, 0.4) 30%,
+    rgba(129, 140, 248, 0.5) 50%,
+    rgba(99, 102, 241, 0.4) 70%,
+    transparent 100%
+  );
+}
+
+/* ── Inner layout ── */
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2.5rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ── Brand ── */
+.footer-brand {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo-svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.footer-logo-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.6;
+}
+
+/* Botones sociales */
+.footer-social {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.footer-social-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--hover-color, white);
+}
+
+/* ── Columnas ── */
+.footer-cols {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-col {
+  min-width: 130px;
+}
+
+.footer-col-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.footer-col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-link {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.38);
+  text-decoration: none;
+  transition: color 0.18s;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem 1.5rem;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-dev-link {
+  color: rgba(129, 140, 248, 0.7);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-dev-link:hover {
+  color: #3248b6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .footer-inner {
+    padding: 2.5rem 1.25rem 2rem;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    width: 100%;
+  }
+
+  .footer-cols {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem 1.25rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
