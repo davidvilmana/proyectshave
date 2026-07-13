@@ -19,7 +19,7 @@ const CONTACT_INFO = [
   {
     icon: <FiMail size={18} />,
     label: "Correo",
-    value: "contacto@shave.pe",
+    value: "Soporte@shave.net.pe",
     href: "mailto:contacto@shave.pe",
   },
   {
@@ -46,7 +46,7 @@ const SOCIAL = [
   {
     icon: <FaWhatsapp size={16} />,
     label: "WhatsApp",
-    href: "https://chat.whatsapp.com/LmpU4x82QhLH5RAOYgTJEZ",
+    href: "https://wa.me/51931506520",
     color: "#25d366",
   },
   {
@@ -84,7 +84,7 @@ _${fecha}_
 📝 *Mensaje:*
 ${form.mensaje}
 
-_Enviado desde shave.pe_`;
+_Enviado desde shave.net.pe_`;
 
   window.open(
     `https://wa.me/51931506520?text=${encodeURIComponent(texto)}`,
